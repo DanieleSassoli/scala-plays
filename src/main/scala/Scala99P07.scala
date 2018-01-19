@@ -10,3 +10,4 @@ object Scala99P07 extends App{
   }
   println(flatten(List(List(1,2), 1, 2, List(3,5,7,8))))
 }
+
