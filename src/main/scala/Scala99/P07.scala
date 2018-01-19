@@ -1,4 +1,6 @@
-object Scala99P07 extends App{
+package Scala99
+
+object P07 {
   def flatten(ls: List[Any]): List[Any] = {
     ls.flatMap { _ match {
         case Nil => Nil

@@ -1,4 +1,6 @@
-object Scala99P08 extends App{
+package Scala99
+
+object P08 {
   def compact(ls: List[Int]): List[Int] = {
     ls match {
       case Nil => Nil
