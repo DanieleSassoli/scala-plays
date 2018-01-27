@@ -1,11 +1,10 @@
 package Scala99
 
 object P08 {
-  def compact(ls: List[Int]): List[Int] = {
+  def compact[T](ls: List[T]): List[T] = {
     ls match {
       case Nil => Nil
       case h :: tail => h :: compact(tail.dropWhile(h == _))
     }
   }
-  println(compact(List(1,1,1,2,2,3,3,3,3,4,4,5,6,7,7,7,8,9,9)))
 }
