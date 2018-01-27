@@ -10,6 +10,7 @@ class P08Test extends FlatSpec with Matchers {
   }
 
   "compact" should "work with any type" in {
-    P08.compact(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)) should be(List(List('a, 'b, 'c, 'a, 'd, 'e)))
+    val ls = List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e')
+    P08.compact(ls) should be(List('a', 'b', 'c', 'a', 'd', 'e'))
   }
 }
