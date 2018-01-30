@@ -71,6 +71,12 @@ class P11ToP20 extends FlatSpec with Matchers{
     val ls = List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)
     P19.rotate(-2, ls) should be (List('j, 'k, 'a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i))
   }
+  //</editor-fold>
 
+  //<editor-fold desc="P20Test">
+  "removeAt" should "remove element at given index" in {
+    val ls = List('a, 'b, 'c, 'd)
+    P20.removeAt(1, ls) should be ((List('a, 'c, 'd),'b))
+  }
   //</editor-fold>
 }

@@ -43,4 +43,8 @@ object P11ToP20 {
       else ls.takeRight(Math.abs(n)) ::: ls.dropRight(Math.abs(n))
     }
   }
+
+  object P20 {
+    def removeAt[T](i: Int, ls: List[T]): (List[T], T) = (ls.filter(_ != ls(i)), ls(i))
+  }
 }
