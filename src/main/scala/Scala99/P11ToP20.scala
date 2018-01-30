@@ -36,4 +36,11 @@ object P11ToP20 {
     def slice[T](start: Int, stop: Int, ls: List[T]): List[T] =
       ls.zipWithIndex.collect{case(elem, index) if index >= start && index < stop => elem}
   }
+
+  object P19 {
+    def rotate(n: Int, ls: List[Symbol]): List[Symbol] = {
+      if(n > 0) ls.drop(n) ::: P18.slice(0, n, ls)
+      else ls.takeRight(Math.abs(n)) ::: ls.dropRight(Math.abs(n))
+    }
+  }
 }

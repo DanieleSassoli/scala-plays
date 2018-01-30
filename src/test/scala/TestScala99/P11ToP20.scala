@@ -50,14 +50,27 @@ class P11ToP20 extends FlatSpec with Matchers{
   //</editor-fold>
 
   //<editor-fold desc="P18Test">
-  "slice" should "return the specified slice (3 to 7) of the list"in {
+  "slice" should "return the specified slice (3 to 7) of the list" in {
     val ls = List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)
     P18.slice(3, 7, ls) should be (List('d, 'e, 'f, 'g))
   }
 
-  "slice" should "return the specified slice (2 to 8) of the list"in {
+  "slice" should "return the specified slice (2 to 8) of the list" in {
     val ls = List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)
     P18.slice(2, 8, ls) should be (List('c, 'd, 'e, 'f, 'g, 'h))
   }
+  //</editor-fold>
+
+  //<editor-fold desc="P19Test">
+  "rotate" should "rotate a list of n(3) position to it's left" in {
+    val ls = List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)
+    P19.rotate(3, ls) should be (List('d, 'e, 'f, 'g, 'h, 'i, 'j, 'k, 'a, 'b, 'c))
+  }
+
+  "rotate" should "rotate a list of n(-2) position to it's left" in {
+    val ls = List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)
+    P19.rotate(-2, ls) should be (List('j, 'k, 'a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i))
+  }
+
   //</editor-fold>
 }
