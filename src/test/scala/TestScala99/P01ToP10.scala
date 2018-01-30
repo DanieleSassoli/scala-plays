@@ -1,6 +1,6 @@
 package TestScala99
 
-import Scala99._
+import Scala99.P01ToP10._
 import org.scalatest.{FlatSpec, Matchers}
 
 class P01ToP10 extends FlatSpec with Matchers {
