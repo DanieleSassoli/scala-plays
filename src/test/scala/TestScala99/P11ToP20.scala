@@ -49,4 +49,15 @@ class P11ToP20 extends FlatSpec with Matchers{
   }
   //</editor-fold>
 
+  //<editor-fold desc="P18Test">
+  "slice" should "return the specified slice (3 to 7) of the list"in {
+    val ls = List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)
+    P18.slice(3, 7, ls) should be (List('d, 'e, 'f, 'g))
+  }
+
+  "slice" should "return the specified slice (2 to 8) of the list"in {
+    val ls = List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k)
+    P18.slice(2, 8, ls) should be (List('c, 'd, 'e, 'f, 'g, 'h))
+  }
+  //</editor-fold>
 }

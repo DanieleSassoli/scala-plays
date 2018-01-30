@@ -31,4 +31,9 @@ object P11ToP20 {
   object P17 {
     def split[T](size:Int, ls: List[T]) = ls.splitAt(size)
   }
+
+  object P18 {
+    def slice[T](start: Int, stop: Int, ls: List[T]): List[T] =
+      ls.zipWithIndex.collect{case(elem, index) if index >= start && index < stop => elem}
+  }
 }
